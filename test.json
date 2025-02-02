@@ -1,0 +1,32 @@
+{
+  "ok": {
+    "agentName": "Homo Memetus",
+    "contracts": [
+      {
+        "chain": -2,
+        "contractAddress": "7Uuzh9JwqF8z3u6MWpQuQJbpD1u46xPDY6PGjwfwTh4o"
+      }
+    ],
+    "twitterUsernames": ["homo_memetus"],
+    "mindshare": 0.011712022046158723,
+    "mindshareDeltaPercent": 58.66712985399125,
+    "marketCap": 383381.132650728,
+    "marketCapDeltaPercent": -22.100376952008453,
+    "price": 0.00039026,
+    "priceDeltaPercent": -22.24812224812225,
+    "liquidity": 59245.860621046144,
+    "volume24Hours": 45164.627242182,
+    "volume24HoursDeltaPercent": -20.559278614460442,
+    "holdersCount": 1517,
+    "holdersCountDeltaPercent": -4.0480708412397215,
+    "averageImpressionsCount": 1248.75,
+    "averageImpressionsCountDeltaPercent": 32.84574468085106,
+    "averageEngagementsCount": 19.083333333333332,
+    "averageEngagementsCountDeltaPercent": 14.499999999999986,
+    "followersCount": 1494,
+    "smartFollowersCount": 31,
+    "topTweets": []
+  },
+  "success": true,
+  "error": null
+}

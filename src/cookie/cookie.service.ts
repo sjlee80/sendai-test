@@ -38,17 +38,10 @@ export class CookieService {
   }
 
   async getKols(limit = 50) {
-    const response = await fetch(
-      `https://api.cookie.fun/v1/kols?limit=${limit}`,
-      {
-        headers: {
-          'x-api-key': process.env.COOKIE_API_KEY,
-        },
-      },
-    );
-
-    console.log(response);
-    return 'test';
+    const response = await this.apiClient.get('/kols', {
+      params: { limit },
+    });
+    return response.data;
   }
 
   async getAgentByTwitter(username: string, interval: string = '_7Days') {
@@ -71,7 +64,7 @@ export class CookieService {
   ) {
     try {
       const response = await this.apiClient.get(
-        `/agents/contractAddress/7Uuzh9JwqF8z3u6MWpQuQJbpD1u46xPDY6PGjwfwTh4o`,
+        `/agents/contractAddress/${contractAddress}`,
         {
           params: { interval },
         },

@@ -61,4 +61,13 @@ export class CookieController {
       throw new BadRequestException(error.message);
     }
   }
+
+  @Get('agents')
+  getAgentsPaged(
+    @Query('interval') interval: string = '_7Days',
+    @Query('page') page = 1,
+    @Query('pageSize') pageSize = 25,
+  ) {
+    return this.cookieService.getAgentsPaged(interval, page, pageSize);
+  }
 }

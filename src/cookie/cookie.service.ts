@@ -74,4 +74,25 @@ export class CookieService {
       throw new Error(`컨트랙트 주소로 에이전트 조회 실패: ${error.message}`);
     }
   }
+
+  async getAgentsPaged(
+    interval: string = '_7Days',
+    page: number = 1,
+    pageSize: number = 10,
+  ) {
+    try {
+      const response = await this.apiClient.get('/agents/agentsPaged', {
+        params: {
+          interval,
+          page,
+          pageSize,
+        },
+      });
+      return response.data;
+    } catch (error) {
+      throw new Error(
+        `페이지네이션된 에이전트 목록 조회 실패: ${error.message}`,
+      );
+    }
+  }
 }
